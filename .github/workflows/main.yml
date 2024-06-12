@@ -24,7 +24,9 @@ jobs:
         path: source
         fetch-depth: 0
     - name: Set up a workflow
+      working-directory: source
       run: |
+        pwd
         git config user.name 'Test'
         git config user.email 'test@example.com'
         touch .github/workflows/new_file.yml
