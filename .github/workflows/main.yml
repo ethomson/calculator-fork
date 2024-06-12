@@ -4,9 +4,9 @@ name: CI Build
 
 on:
   push:
-    branches: [ main, maint/* ]
+    branches: [ master, maint/* ]
   pull_request:
-    branches: [ main, maint/* ]
+    branches: [ master, maint/* ]
   workflow_dispatch:
 
 permissions:
@@ -30,4 +30,4 @@ jobs:
         touch .github/workflows/new_file.yml
         git add .github/workflows/new_file.yml
         git commit -mtest
-        git push origin main:test
+        git push origin master:test
